@@ -1,4 +1,5 @@
 import express from 'express';
+import {RoledrawService} from "./services/RoledrawService";
 
 const app = express();
 const port = 8080; // default port to listen
@@ -11,5 +12,7 @@ app.get( "/", ( req, res ) => {
 // start the Express server
 app.listen( port, () => {
     // ts-lint ignore-next-line
-    console.log('bla 1337');
+    const testRoles = RoledrawService.drawRoles(8);
+    console.log(testRoles);
+    console.log(RoledrawService.calculateBalance(testRoles));
 } );

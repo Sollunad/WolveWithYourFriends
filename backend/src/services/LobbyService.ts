@@ -1,6 +1,5 @@
 import {Lobby} from "../../../models/Lobby";
 import {User} from "../../../models/User";
-import {Player} from "../../../models/Player";
 
 export class LobbyService {
     lobbies: Lobby[] = [];
@@ -13,12 +12,15 @@ export class LobbyService {
     joinLobby(gameCode: string, user: User) {
         const lobby = this.getLobby(gameCode);
         if (!lobby) return;
-        const player = new Player(user);
-        lobby.players.push(player);
+        lobby.players.push(user);
     }
 
     getLobby(gameCode: string): Lobby | undefined {
         return this.lobbies.find(l => l.gameCode = gameCode);
+    }
+
+    setRoleConfig(gameCode: string) {
+
     }
 
     startLobby(gameCode: string) {

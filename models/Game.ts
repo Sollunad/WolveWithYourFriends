@@ -1,3 +1,5 @@
-export class Game {
+import {Player} from "./Player";
 
+export class Game {
+    players: Player[];
 }
