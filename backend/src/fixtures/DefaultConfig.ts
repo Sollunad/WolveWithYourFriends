@@ -12,7 +12,7 @@ import {
 export const DEFAULT_CONFIG: Config = {
     roles: [
         { role: ROLE_DORFBEWOHNER, probability: 0.2 },
-        { role: ROLE_WERWOLF, probability: 0.2 },
+        { role: ROLE_WERWOLF, probability: 0.2, minCount: 1 },
         { role: ROLE_HEXE, probability: 0.5, maxCount: 1 },
         { role: ROLE_SEHER, probability: 0.5, maxCount: 1 },
         { role: ROLE_BESCHUETZER, probability: 0.5, maxCount: 1 },

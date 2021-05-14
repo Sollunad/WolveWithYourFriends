@@ -27,7 +27,7 @@ export const ROLE_HEXE: Role = {
 export const ROLE_AMOR: Role = {
     type: RoleType.GOOD,
     name: 'Amor',
-    description: '...',
+    description: 'Verliebe in der ersten Nacht zwei Mitspieler. Stirbt einer der beiden Spieler, stirbt der andere Spieler mit.',
     winCondition: WinCondition.ONLY_TYPE,
     balanceValue: -3,
 }
@@ -35,7 +35,7 @@ export const ROLE_AMOR: Role = {
 export const ROLE_VERLIEBTER: Role = {
     type: RoleType.GOOD,
     name: 'Verliebter',
-    description: '...',
+    description: 'Du wurdest von Amor verliebt',
     winCondition: WinCondition.ONLY_ROLE,
     balanceValue: 0,
 }
